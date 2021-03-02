@@ -44,6 +44,33 @@
             ></todo-item>
           </ol>
         </div>
+
+        <div id="app-8">
+          <p v-once>{{ message }}</p>
+          <p>{{ sayHi() }}</p>
+        </div>
+
+        <div id="app-9">
+          <div>{{ html }}</div>
+          <div v-html="html"></div>
+        </div>
+
+        <div id="app-10">
+          <a :[attribute]="url">Google</a>
+          <a v-bind="{href: urlTwitter, id: number}">Twitter</a>
+          <a v-bind="twitterObject">Twitter</a>
+        </div>
+
+        <div id="app-11">
+          <p>現在{{ number }}回クリックされています</p>
+          <button v-on:click="countUp(3)">カウントアップ</button>
+          <p v-on:mousemove="changeMousePosition($event, 10)">マウスを載せてください
+            <span v-on:mousemove.stop.prevent>反応しないでください</span>
+          </p>
+          <p>X: {{ x }}, Y: {{ y }},</p>
+          <a v-on:click.prevent href="http://google.com">Google</a>
+          <input type="text" v-on:keyup.enter.space="myAlert">
+        </div>
         <script src="index.js"></script>
     </body>
 </html>

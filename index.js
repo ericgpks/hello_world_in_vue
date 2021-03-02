@@ -53,3 +53,61 @@ var app7 = new Vue({
     ]
   }
 })
+
+var app8 = new Vue({
+  el: '#app-8',
+  data: {
+    message: 'Hello World!'
+  },
+  methods: {
+    sayHi() {
+      this.message = 'Hello VueJS'
+      return 'Hi'
+    },
+  },
+})
+
+var app9 = new Vue({
+  el: '#app-9',
+  data: {
+    html: '<h1>h1です</h1>'
+  },
+})
+
+var app10 = new Vue({
+  el: '#app-10',
+  data: {
+    url: 'https://google.com',
+    urlTwitter: 'https://twitter.com',
+    number: 31,
+    attribute: 'href',
+    twitterObject: {
+      href: 'https://twitter.com',
+      id: 31,
+    },
+  },
+})
+
+var app11 = new Vue({
+  el: '#app-11',
+  data: {
+    number: 0,
+    x: 1,
+    y: 1,
+  },
+  methods: {
+    countUp: function(times) {
+      this.number += 1 * times
+    },
+    changeMousePosition: function(event, divideNumber) {
+      this.x = event.clientX / divideNumber
+      this.y = event.clientY / divideNumber
+    },
+    noEvent: function(event) {
+      event.preventDefault()
+    },
+    myAlert: function() {
+      alert('アラート')
+    }
+  },
+})
