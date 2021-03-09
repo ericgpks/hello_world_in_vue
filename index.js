@@ -144,3 +144,15 @@ var app14 = new Vue({
     message: 'こんにちは'
   },
 })
+
+var app15 = new Vue({
+  el: '#app-15',
+  data: {
+    counter: 0
+  },
+  computed: {
+   lessThanThree: function() {
+    return this.counter > 3 ? '3より上' : '3以下'
+    }
+  }
+})
