@@ -111,3 +111,36 @@ var app11 = new Vue({
     }
   },
 })
+
+var app12 = new Vue({
+  el: '#app-12',
+  data: {
+    number: 0,
+    event: 'click'
+  },
+  methods: {
+    countUp: function() {
+      this.number += 1;
+    },
+  },
+})
+
+var app13 = new Vue({
+  el: '#app-13',
+  data: {
+    number: 0,
+    event: 'click'
+  },
+  methods: {
+    countUp: function() {
+      this.number += 1;
+    },
+  },
+})
+
+var app14 = new Vue({
+  el: '#app-14',
+  data: {
+    message: 'こんにちは'
+  },
+})

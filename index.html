@@ -71,6 +71,21 @@
           <a v-on:click.prevent href="http://google.com">Google</a>
           <input type="text" v-on:keyup.enter.space="myAlert">
         </div>
+
+        <div id="app-12">
+          <p>現在{{ number }}回クリックされています</p>
+          <button v-on:[event]="countUp">カウントアップ</button>
+        </div>
+
+        <div id="app-13">
+          <p>現在{{ number }}回クリックされています</p>
+          <button @click="countUp">カウントアップ</button>
+        </div>
+
+        <div id="app-14">
+          <input type="text" v-model="message">
+          <h1>{{message}}</h1>
+        </div>
         <script src="index.js"></script>
     </body>
 </html>
